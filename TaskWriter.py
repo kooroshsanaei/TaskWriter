@@ -1,12 +1,13 @@
+#!/usr/bin/env python
 '''
-									 _______  _______  _______  _______    ______   _______          
-									/ ___   )(  ____ \(  ____ )(  ___  )  (  __  \ (  ___  )|\     /|
-									\/   )  || (    \/| (    )|| (   ) |  | (  \  )| (   ) |( \   / )
-									    /   )| (__    | (____)|| |   | |  | |   ) || (___) | \ (_) / 
-									   /   / |  __)   |     __)| |   | |  | |   | ||  ___  |  \   /  
-									  /   /  | (      | (\ (   | |   | |  | |   ) || (   ) |   ) (   
-									 /   (_/\| (____/\| ) \ \__| (___) |  | (__/  )| )   ( |   | |   
-									(_______/(_______/|/   \__/(_______)  (______/ |/     \|   \_/   
+																		 _______  _______  _______  _______    ______   _______          
+																		/ ___   )(  ____ \(  ____ )(  ___  )  (  __  \ (  ___  )|\     /|
+																		\/   )  || (    \/| (    )|| (   ) |  | (  \  )| (   ) |( \   / )
+																		    /   )| (__    | (____)|| |   | |  | |   ) || (___) | \ (_) / 
+																		   /   / |  __)   |     __)| |   | |  | |   | ||  ___  |  \   /  
+																		  /   /  | (      | (\ (   | |   | |  | |   ) || (   ) |   ) (   
+																		 /   (_/\| (____/\| ) \ \__| (___) |  | (__/  )| )   ( |   | |   
+																		(_______/(_______/|/   \__/(_______)  (______/ |/     \|   \_/   
                                                                  
 
 
@@ -24,10 +25,13 @@ import sys
 import csv
 
 
+#from introduce_class aprinter 
+#printer("Masazhore ghaddddiiiimi")
+
 #Define the function for Clearing the page, For Writing the sentences Word by word  in one line  
 
 def clear():
-	os.system('clear')
+	return os.system('clear')
 
 def print_word_by_word(senstense):
 	sen_len = len(senstense)
@@ -42,16 +46,15 @@ time.sleep(1)
 
 print("""
 
- _______  _______  _______  _______    ______   _______          
-/ ___   )(  ____ \(  ____ )(  ___  )  (  __  \ (  ___  )|\     /|
-\/   )  || (    \/| (    )|| (   ) |  | (  \  )| (   ) |( \   / )
-    /   )| (__    | (____)|| |   | |  | |   ) || (___) | \ (_) / 
-   /   / |  __)   |     __)| |   | |  | |   | ||  ___  |  \   /  
-  /   /  | (      | (\ (   | |   | |  | |   ) || (   ) |   ) (   
- /   (_/\| (____/\| ) \ \__| (___) |  | (__/  )| )   ( |   | |   
-(_______/(_______/|/   \__/(_______)  (______/ |/     \|   \_/   ,Product
-
-
+             _______  _______   _______   _______   ______    _______          
+            / ___   ) (  ____ \ (  ____ ) (  ___  ) (  __  \  (  ____ \ |\     /|
+            \/   )  | | (    \/ | (    )| | (   ) | | (  \  ) | (    \/ ( \   / )
+                /   ) | (__     | (____)| | |   | | | |   ) | | (__      \ (_) / 
+               /   /  |  __)    |     __) | |   | | | |   | | |  __)      \   /  
+              /   /   | (       | (\ (    | |   | | | |   ) | | (          ) (   
+             /   (_/\ | (____/\ | ) \ \__ | (___) | | (__/  ) | (____/\    | |   
+            (_______/ (_______/ |/   \__/ (_______) (______/  (_______/    \_/   
+                                                                               ,Product
 """)
 
 time.sleep(3)
@@ -59,6 +62,8 @@ time.sleep(3)
 clear()
 
 #Entering the main loop 
+#text =	printer('hello man i love u ') 
+
 
 while True:
 
@@ -175,19 +180,18 @@ while True:
 				for i in jobs_dic:
 					file.write("%s \n"%i)
 				file.close()
-				
+				break
 			else:
 				jobs_dic.append(job)
 
 		#Say goodbye to the friend 
 			
-			print("We wroted your schedule for tommorow Goodbye Friend :)")
-			time.sleep(3)
-			end_or_no = False
-			break
+		print("We wroted your schedule for tommorow Goodbye Friend :)")
+		time.sleep(3)
+		end_or_no = False
+		break
 
 	if (end_or_no == True):
 		pass
 	else:
 		break
-
